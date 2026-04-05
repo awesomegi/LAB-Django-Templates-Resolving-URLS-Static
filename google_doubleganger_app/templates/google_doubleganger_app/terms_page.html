@@ -1,0 +1,43 @@
+{% extends 'google_doubleganger_app/base.html' %}
+{% load static %}
+
+{% block title %}Terms of Service – Google{% endblock %}
+
+{% block content %}
+<div class="terms-wrapper">
+
+  <header class="terms-header">
+    <nav class="nav-right">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+      <span class="material-icons">apps</span>
+      <a href="#" class="btn-signin">Sign in</a>
+    </nav>
+  </header>
+
+  <div class="terms-illustration">
+    <img src="{% static 'terms.svg' %}" alt="Terms illustration" class="terms-svg" />
+  </div>
+
+  <main class="terms-content">
+    <h1>Google Terms of Service</h1>
+    <p class="terms-date">Effective 5 January 2022 | <a href="#">Archived versions</a> | <a href="#">Download PDF</a></p>
+    <p class="terms-country">Country version: <a href="#">Saudi Arabia</a></p>
+
+    <h2>What's covered in these terms</h2>
+    <p>We know it's tempting to skip these Terms of Service, but it's important to establish
+      what you can expect from us as you use Google services, and what we expect from you.</p>
+
+    <h2>Service provider</h2>
+    <p>Google services are provided by, and you're contracting with: Google LLC, organized
+      under the laws of the State of Delaware, USA, and operating under the laws of the USA.</p>
+
+    <h2>Age requirements</h2>
+    <p>If you're under the age required to manage your own Google Account, you must have
+      your parent or legal guardian's permission to use a Google Account.</p>
+
+    <a href="{% url 'google_doubleganger_app:home_view' %}" class="btn-back">← Back to Search</a>
+  </main>
+
+</div>
+{% endblock %}

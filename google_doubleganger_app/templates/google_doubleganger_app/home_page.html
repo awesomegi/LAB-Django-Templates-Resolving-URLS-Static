@@ -1,0 +1,60 @@
+{% extends 'google_doubleganger_app/base.html' %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+
+  <header class="top-nav">
+    <nav class="nav-left">
+      <a href="#">About</a>
+      <a href="#">Store</a>
+    </nav>
+    <nav class="nav-right">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+      <span class="material-icons">apps</span>
+      <a href="#" class="btn-signin">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <img src="{% static 'google-logo.png' %}" alt="Google" class="google-logo" />
+    
+    <!-- BONUS-->
+    <form class="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+      
+      <div class="search-bar">
+        <span class="material-icons search-icon">search</span>
+
+        <input type="text" name="q" class="search-input" autocomplete="off" aria-label="Search" />
+
+        <div class="search-icons-right">
+          <img src="{% static 'camera.png' %}" alt="Camera" class="camera-icon-img">
+          <img src="{% static 'microphone.png' %}" alt="Microphone" class="mic-icon-img">
+        </div>
+      </div>
+
+      <div class="search-buttons">
+        <button type="submit" class="btn-search">Google Search</button>
+        <button type="button" class="btn-search">I'm Feeling Lucky</button>
+      </div>
+    </form>
+
+    <p class="language-note">Google offered in: <a href="#">العربية</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__left">
+      <span>Saudi Arabia</span>
+    </div>
+    <div class="footer__links">
+      <a href="{% url 'google_doubleganger_app:terms_view' %}">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Settings</a>
+    </div>
+  </footer>
+
+</div>
+{% endblock %}
