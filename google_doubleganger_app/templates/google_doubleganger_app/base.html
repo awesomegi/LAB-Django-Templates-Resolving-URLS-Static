@@ -13,9 +13,33 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 <body>
+    <div class="page-wrapper">
+
+  <header class="top-nav">
+    <nav class="nav-left">
+      <a href="#">About</a>
+      <a href="#">Store</a>
+    </nav>
+    <nav class="nav-right">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+      <span class="material-icons">apps</span>
+      <a href="#" class="btn-signin">Sign in</a>
+    </nav>
+  </header>
 
     {% block content %}
     {% endblock %}
-
+    
+  <footer class="footer">
+    <div class="footer__left">
+      <span>Saudi Arabia</span>
+    </div>
+    <div class="footer__links">
+      <a href="{% url 'google_doubleganger_app:terms_view' %}">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Settings</a>
+    </div>
+  </footer>
 </body>
 </html>
